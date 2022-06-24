@@ -17,7 +17,7 @@ GROUP BY release_year;
 SELECT rating, COUNT(*) FROM sakila.film
 GROUP BY rating;
 #-----------------6. What is the mean length of the film for each rating type. Round off the average lengths to two decimal places ------------#
-SELECT rating, AVG(length) AS average FROM sakila.film
+SELECT rating, round(AVG(length),2) AS average FROM sakila.film
 GROUP BY rating;
 #------------------------------7. Which kind of movies (rating) have a mean duration of more than two hours?---------------------------------#
 SELECT rating, AVG(length) AS average FROM sakila.film
